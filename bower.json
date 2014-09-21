@@ -1,0 +1,12 @@
+{
+  "name": "MarathonMajorsApp",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.11",
+    "lodash": "~2.4.1",
+    "angular-cache": "~3.1.1",
+    "angular-google-maps": "~1.2.1",
+    "underscore": "~1.7.0",
+    "showdown": "~0.3.1"
+  }
+}

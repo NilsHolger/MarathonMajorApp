@@ -1,0 +1,15 @@
+﻿<ion-view title="Runners" ng-controller="RunnersController as vm">
+    <ion-content class="has-header">
+        <ion-refresher pulling-text="Pull to refresh..."
+                       on-refresh="vm.loadList()"></ion-refresher>
+           <div class="list">
+            <div ng-repeat="division in vm.runners">
+                <div class="item item-divider item-positive">{{division.divisionName}}</div>
+                <a href="#/app/runners/{{runner.id}}" class="item item-icon-right" ng-repeat="runner in division.divisionRunners">
+                    {{runner.name}}
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,42 @@
+<div class="bar bar-subheader bar-dark">
+    <h2 class="title">My Runners</h2>
+</div>
+
+<ion-view ng-controller="MyRunnersController as vm">
+    <ion-content class="has-header has-subheader">
+
+        <div class="card" ng-hide="vm.myRunners">
+            <div class="item item-divider">
+                No Followed Runners
+            </div>
+            <div class="item item-text-wrap">
+                <p>You are not currently following any runners.</p>
+                <p>
+                    First select a category, then you can follow runners
+                    from their details page.
+                </p>
+                <a class="button button-balanced button-full" href="#/home/categories">Select Runner</a>
+            </div>
+        </div>
+
+
+        <div class="card" ng-show="vm.myRunners">
+            <div class="item item-divider">
+                My Runners
+            </div>
+
+            <a class="item item-icon-right" ng-repeat="runner in vm.myRunners" ng-click="vm.goToRunner(runner)">
+                <h2>{{runner.name}}</h2>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+
+            <div class="item item-text-wrap">
+                <p>
+                    To follow more runners, select a runner, then you can follow runners
+                    from their details page.
+                </p>
+                <a class="button button-balanced button-full" href="#/home/categories">Select Runner</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

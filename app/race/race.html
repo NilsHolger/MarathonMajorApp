@@ -1,0 +1,21 @@
+﻿<ion-view title="Race" ng-controller="RaceController as vm">
+    <ion-content class="has-header">
+        <div class="card">
+            <a class="item item-divider item-balanced item-text-wrap item-icon-left" ng-href="#/app/locations">
+                {{vm.race.name}}
+                <i class="icon ion-chevron-left icon-accessory"></i>
+            </a>   
+            <div class="item">
+                <iframe src="{{vm.race.teaserVideo}}"
+                        frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div> 
+            <div class="item item-divider">
+                <div class="buttons">
+                    <a class="button button-calm" ng-href="#/app/locations-map/{{vm.race.id}}">
+                        <i class="icon ion-ios7-location"></i> Location
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

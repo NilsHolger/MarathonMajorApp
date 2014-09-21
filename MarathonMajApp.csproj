@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DB812D9-3685-48F0-955D-4D7143F749B5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MarathonMajApp</RootNamespace>
+    <AssemblyName>MarathonMajApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="app\css\custom.css" />
+    <Content Include="app\directives\markitdown.js" />
+    <Content Include="app\locations\locations-map-controller.js" />
+    <Content Include="app\locations\locations-map.html" />
+    <Content Include="app\works\howthisworks-controller.js" />
+    <Content Include="lib\ionic\fonts\ionicons.eot" />
+    <Content Include="lib\ionic\fonts\ionicons.ttf" />
+    <Content Include="lib\ionic\fonts\ionicons.woff" />
+    <Content Include="lib\ionic\scss\ionic.scss" />
+    <Content Include="lib\ionic\scss\ionicons\ionicons.scss" />
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-animation.scss" />
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-font.scss" />
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-icons.scss" />
+    <Content Include="lib\ionic\scss\ionicons\_ionicons-variables.scss" />
+    <Content Include="lib\ionic\scss\_action-sheet.scss" />
+    <Content Include="lib\ionic\scss\_animations.scss" />
+    <Content Include="lib\ionic\scss\_backdrop.scss" />
+    <Content Include="lib\ionic\scss\_badge.scss" />
+    <Content Include="lib\ionic\scss\_bar.scss" />
+    <Content Include="lib\ionic\scss\_button-bar.scss" />
+    <Content Include="lib\ionic\scss\_button.scss" />
+    <Content Include="lib\ionic\scss\_checkbox.scss" />
+    <Content Include="lib\ionic\scss\_form.scss" />
+    <Content Include="lib\ionic\scss\_grid.scss" />
+    <Content Include="lib\ionic\scss\_items.scss" />
+    <Content Include="lib\ionic\scss\_list.scss" />
+    <Content Include="lib\ionic\scss\_loading.scss" />
+    <Content Include="lib\ionic\scss\_menu.scss" />
+    <Content Include="lib\ionic\scss\_mixins.scss" />
+    <Content Include="lib\ionic\scss\_modal.scss" />
+    <Content Include="lib\ionic\scss\_platform.scss" />
+    <Content Include="lib\ionic\scss\_popover.scss" />
+    <Content Include="lib\ionic\scss\_popup.scss" />
+    <Content Include="lib\ionic\scss\_progress.scss" />
+    <Content Include="lib\ionic\scss\_radio.scss" />
+    <Content Include="lib\ionic\scss\_range.scss" />
+    <Content Include="lib\ionic\scss\_reset.scss" />
+    <Content Include="lib\ionic\scss\_scaffolding.scss" />
+    <Content Include="lib\ionic\scss\_select.scss" />
+    <Content Include="lib\ionic\scss\_slide-box.scss" />
+    <Content Include="lib\ionic\scss\_split-pane.scss" />
+    <Content Include="lib\ionic\scss\_tabs.scss" />
+    <Content Include="lib\ionic\scss\_toggle.scss" />
+    <Content Include="lib\ionic\scss\_type.scss" />
+    <Content Include="lib\ionic\scss\_util.scss" />
+    <Content Include="lib\ionic\scss\_variables.scss" />
+    <Content Include="lib\ionic\version.json" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include="ionic.project" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="www\lib\angular-google-maps\.gitignore" />
+    <Content Include="www\lib\angular-google-maps\dist\angular-google-maps.js" />
+    <Content Include="www\lib\angular-google-maps\dist\angular-google-maps.min.js" />
+    <Content Include="www\lib\angular-google-maps\example\.gitignore" />
+    <Content Include="www\lib\angular-google-maps\example\assets\images\blue_marker.png" />
+    <Content Include="www\lib\angular-google-maps\example\assets\images\cluster1.png" />
+    <Content Include="www\lib\angular-google-maps\example\assets\images\plane.png" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\dynamic-map-height.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\example.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\free-draw-polygons.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\geojson.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\hugedata.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-154-marker-fit.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-157-ng-click.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-322.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-354-window-windows-rerender-content.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-371-polygon-ng-repeat.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-382-window-windows-ng-show.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-393-cluster-events-mapped.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-432-markers-fit-clustering.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-482-markers-animation-clustering.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-482-markers-animation.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-484-markers-self.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-495-polyline-fit.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-498-marker-move-loaded.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-504-markers-flash.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-507-windows-show-w-marker-broken.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-522-polyline-no-paths.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-534-markers-child-destroy.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-538-window-plus1.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-545-marker-flash.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\issue-74-markers-events.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\shapes-lines.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\templates\info.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\controllers\two-maps.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\scripts\mocks\heat-layer.js" />
+    <Content Include="www\lib\angular-google-maps\example\assets\stylesheets\dynamic-height.css" />
+    <Content Include="www\lib\angular-google-maps\example\assets\stylesheets\example.css" />
+    <Content Include="www\lib\angular-google-maps\example\assets\stylesheets\geojson.css" />
+    <Content Include="www\lib\angular-google-maps\example\assets\stylesheets\hugedata.css" />
+    <Content Include="www\lib\angular-google-maps\example\assets\templates\info.html" />
+    <Content Include="www\lib\angular-google-maps\example\dynamic-map-height.html" />
+    <Content Include="www\lib\angular-google-maps\example\example.html" />
+    <Content Include="www\lib\angular-google-maps\example\free-draw-polygons.html" />
+    <Content Include="www\lib\angular-google-maps\example\geojson.html" />
+    <Content Include="www\lib\angular-google-maps\example\hugedata.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-154-marker-fit.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-157-ng-click.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-322.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-354-window-windows-rerender-content.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-371-polygon-ng-repeat.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-382-window-windows-ng-show.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-393-cluster-events-mapped.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-432-markers-fit-clustering.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-482-markers-animation-clustering.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-482-markers-animation.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-484-markers-self.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-495-polyline-fit.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-498-marker-move-loaded.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-504-markers-flash.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-507-windows-show-w-marker-broken.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-522-polyline-no-paths.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-534-markers-child-destroy.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-538-window-plus1.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-545-marker-flash-clusterer.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-545-marker-flash.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-572-polylines-no-paths.html" />
+    <Content Include="www\lib\angular-google-maps\example\issue-74-markers-events.html" />
+    <Content Include="www\lib\angular-google-maps\example\shapes-lines.html" />
+    <Content Include="www\lib\angular-google-maps\example\two-maps.html" />
+    <Content Include="www\lib\angular-google-maps\lib\infobox.js" />
+    <Content Include="www\lib\angular-google-maps\lib\markerclusterer.js" />
+    <Content Include="www\lib\angular-google-maps\lib\markerwithlabel.js" />
+    <Content Include="www\lib\angular-google-maps\src\js\extensions\markerclusterer.js" />
+    <Content Include="www\lib\ionic\fonts\ionicons.eot" />
+    <Content Include="www\lib\ionic\fonts\ionicons.ttf" />
+    <Content Include="www\lib\ionic\fonts\ionicons.woff" />
+    <Content Include="www\lib\ionic\scss\ionic.scss" />
+    <Content Include="www\lib\ionic\scss\ionicons\ionicons.scss" />
+    <Content Include="www\lib\ionic\scss\ionicons\_ionicons-animation.scss" />
+    <Content Include="www\lib\ionic\scss\ionicons\_ionicons-font.scss" />
+    <Content Include="www\lib\ionic\scss\ionicons\_ionicons-icons.scss" />
+    <Content Include="www\lib\ionic\scss\ionicons\_ionicons-variables.scss" />
+    <Content Include="www\lib\ionic\scss\_action-sheet.scss" />
+    <Content Include="www\lib\ionic\scss\_animations.scss" />
+    <Content Include="www\lib\ionic\scss\_backdrop.scss" />
+    <Content Include="www\lib\ionic\scss\_badge.scss" />
+    <Content Include="www\lib\ionic\scss\_bar.scss" />
+    <Content Include="www\lib\ionic\scss\_button-bar.scss" />
+    <Content Include="www\lib\ionic\scss\_button.scss" />
+    <Content Include="www\lib\ionic\scss\_checkbox.scss" />
+    <Content Include="www\lib\ionic\scss\_form.scss" />
+    <Content Include="www\lib\ionic\scss\_grid.scss" />
+    <Content Include="www\lib\ionic\scss\_items.scss" />
+    <Content Include="www\lib\ionic\scss\_list.scss" />
+    <Content Include="www\lib\ionic\scss\_loading.scss" />
+    <Content Include="www\lib\ionic\scss\_menu.scss" />
+    <Content Include="www\lib\ionic\scss\_mixins.scss" />
+    <Content Include="www\lib\ionic\scss\_modal.scss" />
+    <Content Include="www\lib\ionic\scss\_platform.scss" />
+    <Content Include="www\lib\ionic\scss\_popover.scss" />
+    <Content Include="www\lib\ionic\scss\_popup.scss" />
+    <Content Include="www\lib\ionic\scss\_progress.scss" />
+    <Content Include="www\lib\ionic\scss\_radio.scss" />
+    <Content Include="www\lib\ionic\scss\_range.scss" />
+    <Content Include="www\lib\ionic\scss\_reset.scss" />
+    <Content Include="www\lib\ionic\scss\_scaffolding.scss" />
+    <Content Include="www\lib\ionic\scss\_select.scss" />
+    <Content Include="www\lib\ionic\scss\_slide-box.scss" />
+    <Content Include="www\lib\ionic\scss\_split-pane.scss" />
+    <Content Include="www\lib\ionic\scss\_tabs.scss" />
+    <Content Include="www\lib\ionic\scss\_toggle.scss" />
+    <Content Include="www\lib\ionic\scss\_type.scss" />
+    <Content Include="www\lib\ionic\scss\_util.scss" />
+    <Content Include="www\lib\ionic\scss\_variables.scss" />
+    <Content Include="www\lib\ionic\version.json" />
+    <Content Include="www\lib\lodash\.bower.json" />
+    <Content Include="www\lib\lodash\bower.json" />
+    <Content Include="www\lib\angular-animate\.bower.json" />
+    <Content Include="www\lib\angular-animate\angular-animate.min.js.map" />
+    <Content Include="www\lib\angular-animate\bower.json" />
+    <Content Include="www\lib\angular-animate\README.md" />
+    <Content Include="www\lib\angular-sanitize\.bower.json" />
+    <Content Include="www\lib\angular-sanitize\angular-sanitize.min.js.map" />
+    <Content Include="www\lib\angular-sanitize\bower.json" />
+    <Content Include="www\lib\angular-sanitize\README.md" />
+    <Content Include="www\lib\angular-ui-router\.bower.json" />
+    <Content Include="www\lib\angular-ui-router\bower.json" />
+    <Content Include="www\lib\angular-ui-router\CHANGELOG.md" />
+    <Content Include="www\lib\angular-ui-router\LICENSE" />
+    <Content Include="www\lib\angular-ui-router\README.md" />
+    <Content Include="www\lib\angular\.bower.json" />
+    <Content Include="www\lib\angular\angular.min.js.gzip" />
+    <Content Include="www\lib\angular\angular.min.js.map" />
+    <Content Include="www\lib\angular\bower.json" />
+    <Content Include="www\lib\angular\README.md" />
+    <Content Include="www\lib\collide\.bower.json" />
+    <Content Include="www\lib\collide\bower.json" />
+    <Content Include="www\lib\collide\package.json" />
+    <Content Include="www\lib\collide\README.md" />
+    <Content Include="www\lib\ionic\.bower.json" />
+    <Content Include="www\lib\ionic\bower.json" />
+    <Content Include="www\lib\ionic\README.md" />
+    <Content Include="www\lib\angular-cache\.bower.json" />
+    <Content Include="www\lib\angular-cache\bower.json" />
+    <Content Include="www\lib\angular-cache\CHANGELOG.md" />
+    <Content Include="www\lib\angular-cache\dist\angular-cache.min.map" />
+    <Content Include="www\lib\angular-cache\LICENSE" />
+    <Content Include="www\lib\angular-cache\README.md" />
+    <Content Include="www\lib\angular-cache\TRANSITION.md" />
+    <Content Include="www\lib\angular-google-maps\.bower.json" />
+    <Content Include="www\lib\angular-google-maps\.travis.yml" />
+    <Content Include="www\lib\angular-google-maps\bower.json" />
+    <Content Include="www\lib\angular-google-maps\circle.yml" />
+    <Content Include="www\lib\angular-google-maps\Gruntfile.coffee" />
+    <Content Include="www\lib\angular-google-maps\GruntJasmineSettings.coffee" />
+    <Content Include="www\lib\angular-google-maps\GruntOptions.coffee" />
+    <Content Include="www\lib\angular-google-maps\package.json" />
+    <Content Include="www\lib\angular-google-maps\README.markdown" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\bootstrap.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\control.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\marker.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\markers.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\child\marker-child-model.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\child\window-child-model.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\parent\i-marker-parent.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\parent\layer-parent-model.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\parent\marker-parent-model.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\parent\markers-parent-model.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\parent\markers-parent.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\models\parent\windows-parent.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\utils\base-object.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\utils\events-helper.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\utils\gmap-util.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\utils\model-key.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\utils\prop-map.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\utils\_async.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\directives\api\window.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\helpers\google-api-mock.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\helpers\google-map-spec-controller.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\usage\underscore.difference.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\usage\underscore.indexOfObject.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\usage\underscore.intersection.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\coffee\usage\underscore.isEqual.spec.coffee" />
+    <Content Include="www\lib\angular-google-maps\spec\js\.keep" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\control.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\free-draw-polygons.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\i-control.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\i-label.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\i-marker.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\i-polyline.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\i-window.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\managers\clusterer-marker-manager.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\managers\marker-manager.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\map.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\marker.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\markers.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\child\free-draw-polygons-child.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\child\label-child-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\child\marker-child-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\child\polyline-child-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\child\window-child-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\parent\i-marker-parent-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\parent\i-window-parent-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\parent\layer-parent-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\parent\marker-parent-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\parent\markers-parent-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\parent\polylines-parent-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\models\parent\windows-parent-model.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\polyline.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\polylines.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\base-object.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\child-events.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\ctrl_handle.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\events-helper.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\fit-helper.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\gmap-util.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\is-ready.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\linked.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\logger.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\model-key.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\models-watcher.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\prop-map.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\property-action.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\utils\_async.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\window.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\api\windows.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\circle.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\control.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\controllers\polyline-display.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\free-draw-polygons.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\label.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\layer.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\map.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\marker.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\markers.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\polygon.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\polyline.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\polylines.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\rectangle.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\window.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\directives\windows.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\extensions\google.maps.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\extensions\lodash.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\extensions\string.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\module.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\utils\LatLngArraySync.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\coffee\utils\MapEvents.coffee" />
+    <Content Include="www\lib\angular-google-maps\src\js\.gitkeep" />
+    <Content Include="www\lib\angular-google-maps\src\js\directives\.gitkeep" />
+    <Content Include="www\lib\angular-google-maps\src\js\directives\api\managers\.gitkeep" />
+    <Content Include="www\lib\angular-google-maps\src\js\directives\api\models\.gitkeep" />
+    <Content Include="www\lib\angular-google-maps\src\js\directives\api\utils\.gitkeep" />
+    <Content Include="www\lib\showdown\compressed\extensions\github.js" />
+    <Content Include="www\lib\showdown\compressed\extensions\google-prettify.js" />
+    <Content Include="www\lib\showdown\compressed\extensions\twitter.js" />
+    <Content Include="www\lib\showdown\compressed\showdown.js" />
+    <Content Include="www\lib\showdown\license.txt" />
+    <Content Include="www\lib\showdown\src\extensions\github.js" />
+    <Content Include="www\lib\showdown\src\extensions\prettify.js" />
+    <Content Include="www\lib\showdown\src\extensions\table.js" />
+    <Content Include="www\lib\showdown\src\extensions\twitter.js" />
+    <Content Include="www\lib\showdown\src\showdown.js" />
+    <Content Include="www\lib\underscore\.bower.json" />
+    <Content Include="www\lib\underscore\.eslintrc" />
+    <Content Include="www\lib\underscore\bower.json" />
+    <Content Include="www\lib\underscore\component.json" />
+    <Content Include="www\lib\underscore\LICENSE" />
+    <Content Include="www\lib\underscore\package.json" />
+    <Content Include="www\lib\underscore\README.md" />
+    <Content Include="www\lib\underscore\underscore-min.map" />
+    <Content Include="www\lib\showdown\.bower.json" />
+    <Content Include="www\lib\showdown\.travis.yml" />
+    <Content Include="www\lib\showdown\package.json" />
+    <Content Include="www\lib\showdown\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="app\app.js" />
+    <Content Include="app\home\categories-controller.js" />
+    <Content Include="app\home\categories.html" />
+    <Content Include="app\home\home.html" />
+    <Content Include="app\home\my-runners-controller.js" />
+    <Content Include="app\home\myrunners.html" />
+    <Content Include="app\images\denniskimetto.jpg" />
+    <Content Include="app\images\ednakiplagat.jpg" />
+    <Content Include="app\images\priscahjeptoo.jpg" />
+    <Content Include="app\images\ritajeptoo.jpg" />
+    <Content Include="app\images\tsegayekebede.jpg" />
+    <Content Include="app\images\wilsonkipsang.jpg" />
+    <Content Include="app\layout\menu-layout.html" />
+    <Content Include="app\locations\locations-controller.js" />
+    <Content Include="app\locations\locations.html" />
+    <Content Include="app\newjson.js" />
+    <Content Include="app\originaljson.js" />
+    <Content Include="app\race\race-controller.js" />
+    <Content Include="app\race\race.html" />
+    <Content Include="app\rankings\rankings-controller.js" />
+    <Content Include="app\rankings\rankings.html" />
+    <Content Include="app\runners\runner-detail-controller.js" />
+    <Content Include="app\runners\runner-details.html" />
+    <Content Include="app\runners\runners-controller.js" />
+    <Content Include="app\runners\runners.html" />
+    <Content Include="app\services\marathonApi.js" />
+    <Content Include="app\services\myRunnersService.js" />
+    <Content Include="app\works\howthisworks.html" />
+    <Content Include="config.xml" />
+    <Content Include="gulpfile.js" />
+    <Content Include="index.html" />
+    <Content Include="lib\ionic\css\ionic.css" />
+    <Content Include="lib\ionic\css\ionic.min.css" />
+    <Content Include="lib\ionic\fonts\ionicons.svg" />
+    <Content Include="lib\ionic\js\angular-ui\angular-ui-router.js" />
+    <Content Include="lib\ionic\js\angular-ui\angular-ui-router.min.js" />
+    <Content Include="lib\ionic\js\angular\angular-animate.js" />
+    <Content Include="lib\ionic\js\angular\angular-animate.min.js" />
+    <Content Include="lib\ionic\js\angular\angular-resource.js" />
+    <Content Include="lib\ionic\js\angular\angular-resource.min.js" />
+    <Content Include="lib\ionic\js\angular\angular-sanitize.js" />
+    <Content Include="lib\ionic\js\angular\angular-sanitize.min.js" />
+    <Content Include="lib\ionic\js\angular\angular.js" />
+    <Content Include="lib\ionic\js\angular\angular.min.js" />
+    <Content Include="lib\ionic\js\ionic-angular.js" />
+    <Content Include="lib\ionic\js\ionic-angular.min.js" />
+    <Content Include="lib\ionic\js\ionic.bundle.js" />
+    <Content Include="lib\ionic\js\ionic.bundle.min.js" />
+    <Content Include="lib\ionic\js\ionic.js" />
+    <Content Include="lib\ionic\js\ionic.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="www\app\app.js" />
+    <Content Include="www\app\home\categories.html" />
+    <Content Include="www\app\home\home.html" />
+    <Content Include="www\app\home\myrunners.html" />
+    <Content Include="www\app\layout\menu-layout.html" />
+    <Content Include="www\css\style.css" />
+    <Content Include="www\img\ionic.png" />
+    <Content Include="www\index.html" />
+    <Content Include="www\js\app.js" />
+    <Content Include="www\js\controllers.js" />
+    <Content Include="www\lib\angular-animate\angular-animate.js" />
+    <Content Include="www\lib\angular-animate\angular-animate.min.js" />
+    <Content Include="www\lib\angular-cache\dist\angular-cache.js" />
+    <Content Include="www\lib\angular-cache\dist\angular-cache.min.js" />
+    <Content Include="www\lib\angular-sanitize\angular-sanitize.js" />
+    <Content Include="www\lib\angular-sanitize\angular-sanitize.min.js" />
+    <Content Include="www\lib\angular-ui-router\release\angular-ui-router.js" />
+    <Content Include="www\lib\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="www\lib\angular-ui-router\src\common.js" />
+    <Content Include="www\lib\angular-ui-router\src\compat.js" />
+    <Content Include="www\lib\angular-ui-router\src\resolve.js" />
+    <Content Include="www\lib\angular-ui-router\src\state.js" />
+    <Content Include="www\lib\angular-ui-router\src\stateDirectives.js" />
+    <Content Include="www\lib\angular-ui-router\src\stateFilters.js" />
+    <Content Include="www\lib\angular-ui-router\src\templateFactory.js" />
+    <Content Include="www\lib\angular-ui-router\src\urlMatcherFactory.js" />
+    <Content Include="www\lib\angular-ui-router\src\urlRouter.js" />
+    <Content Include="www\lib\angular-ui-router\src\view.js" />
+    <Content Include="www\lib\angular-ui-router\src\viewDirective.js" />
+    <Content Include="www\lib\angular-ui-router\src\viewScroll.js" />
+    <Content Include="www\lib\angular\angular-csp.css" />
+    <Content Include="www\lib\angular\angular.js" />
+    <Content Include="www\lib\angular\angular.min.js" />
+    <Content Include="www\lib\collide\.gitignore" />
+    <Content Include="www\lib\collide\collide.js" />
+    <Content Include="www\lib\collide\test.html" />
+    <Content Include="www\lib\collide\test\animator.spec.js" />
+    <Content Include="www\lib\collide\test\core\timeline.spec.js" />
+    <Content Include="www\lib\collide\test\util\simple-emitter.spec.js" />
+    <Content Include="www\lib\ionic\css\ionic.css" />
+    <Content Include="www\lib\ionic\css\ionic.min.css" />
+    <Content Include="www\lib\ionic\fonts\ionicons.svg" />
+    <Content Include="www\lib\ionic\js\angular-ui\angular-ui-router.js" />
+    <Content Include="www\lib\ionic\js\angular-ui\angular-ui-router.min.js" />
+    <Content Include="www\lib\ionic\js\angular\angular-animate.js" />
+    <Content Include="www\lib\ionic\js\angular\angular-animate.min.js" />
+    <Content Include="www\lib\ionic\js\angular\angular-resource.js" />
+    <Content Include="www\lib\ionic\js\angular\angular-resource.min.js" />
+    <Content Include="www\lib\ionic\js\angular\angular-sanitize.js" />
+    <Content Include="www\lib\ionic\js\angular\angular-sanitize.min.js" />
+    <Content Include="www\lib\ionic\js\angular\angular.js" />
+    <Content Include="www\lib\ionic\js\angular\angular.min.js" />
+    <Content Include="www\lib\ionic\js\ionic-angular.js" />
+    <Content Include="www\lib\ionic\js\ionic-angular.min.js" />
+    <Content Include="www\lib\ionic\js\ionic.bundle.js" />
+    <Content Include="www\lib\ionic\js\ionic.bundle.min.js" />
+    <Content Include="www\lib\ionic\js\ionic.js" />
+    <Content Include="www\lib\ionic\js\ionic.min.js" />
+    <Content Include="www\lib\lodash\dist\lodash.compat.js" />
+    <Content Include="www\lib\lodash\dist\lodash.compat.min.js" />
+    <Content Include="www\lib\lodash\dist\lodash.js" />
+    <Content Include="www\lib\lodash\dist\lodash.min.js" />
+    <Content Include="www\lib\lodash\dist\lodash.underscore.js" />
+    <Content Include="www\lib\lodash\dist\lodash.underscore.min.js" />
+    <Content Include="www\lib\lodash\LICENSE.txt" />
+    <Content Include="www\lib\underscore\.gitignore" />
+    <Content Include="www\lib\underscore\underscore-min.js" />
+    <Content Include="www\lib\underscore\underscore.js" />
+    <Content Include="www\templates\browse.html" />
+    <Content Include="www\templates\login.html" />
+    <Content Include="www\templates\menu.html" />
+    <Content Include="www\templates\playlist.html" />
+    <Content Include="www\templates\playlists.html" />
+    <Content Include="www\templates\search.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8578</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8578/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+c:\users\nils-holger\documents\visual studio 2013\Projects\MarathonMajApp\MarathonMajApp\bin\MarathonMajApp.dll.config
+c:\users\nils-holger\documents\visual studio 2013\Projects\MarathonMajApp\MarathonMajApp\bin\MarathonMajApp.dll
+c:\users\nils-holger\documents\visual studio 2013\Projects\MarathonMajApp\MarathonMajApp\bin\MarathonMajApp.pdb
+c:\users\nils-holger\documents\visual studio 2013\Projects\MarathonMajApp\MarathonMajApp\obj\Debug\MarathonMajApp.csprojResolveAssemblyReference.cache
+c:\users\nils-holger\documents\visual studio 2013\Projects\MarathonMajApp\MarathonMajApp\obj\Debug\MarathonMajApp.dll
+c:\users\nils-holger\documents\visual studio 2013\Projects\MarathonMajApp\MarathonMajApp\obj\Debug\MarathonMajApp.pdb

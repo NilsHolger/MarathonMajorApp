@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Marathon Majors App</title>
+    <meta name="description" content="marathon, majors, runners, leaders, marathon locations">
+    <meta name="author" content="Nils-Holger Nägele" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <link href="app/css/custom.css" rel="stylesheet" />
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="www/lib/angular-cache/dist/angular-cache.min.js"></script>
+    <script src="www/lib/underscore/underscore-min.js"></script>
+
+    <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+    <script src="www/lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="www/lib/lodash/dist/lodash.min.js"></script>
+    <script src="www/lib/showdown/compressed/showdown.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    <script src="app/runners/runners-controller.js"></script>
+    <script src="app/runners/runner-detail-controller.js"></script>
+    <script src="app/home/categories-controller.js"></script>
+    <script src="app/locations/locations-controller.js"></script>
+    <script src="app/locations/locations-map-controller.js"></script>
+    <script src="app/rankings/rankings-controller.js"></script>
+    <script src="app/race/race-controller.js"></script>
+    <script src="app/home/my-runners-controller.js"></script>
+    <script src="app/works/howthisworks-controller.js"></script>
+    <script src="app/services/marathonApi.js"></script>
+    <script src="app/services/myRunnersService.js"></script>
+    <script src="app/directives/markitdown.js"></script>
+  </head>
+
+  <body ng-app="marathonMajorsApp" ng-cloak>
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

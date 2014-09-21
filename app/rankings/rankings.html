@@ -1,0 +1,62 @@
+﻿<ion-view title="Rankings" ng-controller="RankingsController as vm">
+    <ion-content class="has-header">
+        <div class="list">
+            <div ng-repeat="division in vm.rankings">
+                <div class="item item-divider item-dark">{{division.divisionName}}</div>
+
+                <a href="#/app/runners/{{runner.runnersId}}" class="item item-icon-right" ng-repeat="runner in division.divisionStandings">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="positive">{{runner.runnersName}}</h2>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h4>Image</h4>
+                        </div>
+                        <div class="col">
+                            <h4>Overall Place</h4>
+                        </div>
+                        <div class="col">
+                            <h4>Personal Best</h4>
+                        </div>
+                        <div class="col">
+                            <h4>Recent 1st</h4>
+                        </div>
+                        <div class="col">
+                            <h4>Recent 2nd</h4>
+                        </div>
+                        <div class="col">
+                            <h4>Recent 3rd</h4>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <img ng-src="{{runner.imageUrl}}" title="{{runner.runnersName}}" style="height:100%; width:100%;" />
+                        </div>
+                        <div class="col">
+                            <h5>{{runner.overallPlace}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>{{runner.personalBest}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>{{runner.Recent1stPlace}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>{{runner.Recent2ndPlace}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>{{runner.Recent3rdPlace}}</h5>
+                        </div>
+                    </div>
+
+
+                    <i class="icon ion-chevron-right icon-accessory"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
